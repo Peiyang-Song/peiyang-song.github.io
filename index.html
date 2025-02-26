@@ -93,6 +93,42 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+	  <tr onmouseout="leanprogress_stop()" onmouseover="leanprogress_start()">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='leanprogress_image'>
+                  <img src='images/leanprogress-1.png' width="150">
+                </div>
+                <img src='images/leanprogress-2.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function leanprogress_start() {
+                  document.getElementById('leanprogress_image').style.opacity = "1";
+                }
+
+                function leanprogress_stop() {
+                  document.getElementById('leanprogress_image').style.opacity = "0";
+                }
+                leanprogress_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://arxiv.org/abs/2502.17925">
+                <papertitle>LeanProgress: Guiding Search for Neural Theorem Proving via Proof Progress Prediction</papertitle>
+              </a>
+              <br />
+	      <a target="_blank" href="https://hsz0403.github.io/">Suozhi Huang</a>, <strong>Peiyang Song</strong>, <a target="_blank" href="https://www.robertj1.com/">Robert Joseph George</a>, and <a target="_blank" href="https://tensorlab.cms.caltech.edu/users/anima/">Anima Anandkumar</a>
+	      <br />
+              <em>ArXiv Preprint</em>, 2024
+              <br />
+	      <a target="_blank" href="https://arxiv.org/abs/2502.17925">arXiv</a>
+              <p></p>
+              <p>
+                LLMs struggling with long proofs? We present LeanProgress, which uses a novel critic model where “distance” to the goal state acts as a key signal for step prediction, boosting performance on neural theorem proving in Lean. Our method achieves 75.1% prediction accuracy, with a 3.8% gain in proof search by incorporating step prediction.
+              </p>
+            </td>
+          </tr>
+
 	  <tr onmouseout="idiom_stop()" onmouseover="idiom_start()">
             <td style="padding:5px;width:17%;vertical-align:middle">
               <div class="one">
