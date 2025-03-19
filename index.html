@@ -129,6 +129,46 @@
             </td>
           </tr>
 
+	  <tr onmouseout="leanagent_stop()" onmouseover="leanagent_start()">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='leanagent_image'>
+                  <img src='images/leanagent-1.png' width="160">
+                </div>
+                <img src='images/leanagent-2.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function leanagent_start() {
+                  document.getElementById('leanagent_image').style.opacity = "1";
+                }
+
+                function leanagent_stop() {
+                  document.getElementById('leanagent_image').style.opacity = "0";
+                }
+                leanagent_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://arxiv.org/abs/2410.06209">
+                <papertitle>LeanAgent: Lifelong Learning for Formal Theorem Proving</papertitle>
+              </a>
+              <br />
+	      <a target="_blank" href="https://github.com/Adarsh321123">Adarsh Kumarappan</a>, <a target="_blank" href="https://motiwari.com/">Mo Tiwari</a>, <strong>Peiyang Song</strong>, <a target="_blank" href="https://www.robertj1.com/">Robert Joseph George</a>, <a target="_blank" href="https://xiaocw11.github.io/">Chaowei Xiao</a>, and <a target="_blank" href="https://tensorlab.cms.caltech.edu/users/anima/">Anima Anandkumar</a>
+	      <br />
+              <em>International Conference on Learning Representations (ICLR)</em>, 2025
+              <br />
+	      <a target="_blank" href="https://arxiv.org/abs/2410.06209">arXiv</a>
+              /
+	      <a target="_blank" href="https://github.com/lean-dojo/LeanAgent">code</a>
+              /
+	      <a target="_blank" href="https://iclr.cc/virtual/2025/poster/29455">proceeding</a>
+              <p></p>
+              <p>
+                LeanAgent continuously learns and improves on ever-expanding mathematical knowledge without forgetting what it learned before. It has a curriculum learning strategy that optimizes the learning trajectory in terms of mathematical difficulty, a dynamic database for efficient management of evolving mathematical knowledge, and progressive training to balance stability and plasticity.
+	      </p>
+            </td>
+          </tr>
+
 	  <tr onmouseout="idiom_stop()" onmouseover="idiom_start()">
             <td style="padding:5px;width:17%;vertical-align:middle">
               <div class="one">
