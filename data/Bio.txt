@@ -1,1 +1,5 @@
-Peiyang Song is an undergraduate student studying Computer Science at California Institute of Technology (Caltech), advised by Prof. Steven Low, with a minor in Robotics advised by Prof. Günter Niemeyer. He is currently a researcher in the Stanford AI Lab (SAIL), advised by Prof. Noah Goodman and Gabriel Poesia. His current research interest is mainly in LLM reasoning, especially neuro-symbolic AI for formal math and verifiable code generation. In the past, he also published on neuro-symbolic methods for energy-efficient ML systems and neural machine translation.
+Peiyang Song is a 3rd-year undergraduate student studying Computer Science at California Institute of Technology (Caltech), advised by Prof. Steven Low, with a minor in Robotics advised by Prof. Günter Niemeyer. 
+He is a researcher in the Stanford AI Lab (SAIL), working with Prof. Noah Goodman and Gabriel Poesia in the Computation & Cognition Lab (CoCoLab). 
+He will join Berkeley AI Research (BAIR) Lab, starting June 2025, advised by Prof. Dawn Song. 
+His current research interest is mainly in LLM reasoning, especially neuro-symbolic AI for formal math and verifiable code generation. 
+In the past, he also published on neuro-symbolic methods for energy-efficient ML systems and neural machine translation.
