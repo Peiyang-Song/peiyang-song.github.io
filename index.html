@@ -87,9 +87,9 @@
 <!-- 		 <b>[Sep. 2023]</b>  We released <a target="_blank" href="https://github.com/lean-dojo/LeanCopilot">Lean Copilot</a> for LLMs to act as copilots for theorem proving in Lean: <a target="_blank" href="https://youtu.be/OxFcZU5ihBk">Video demo</a>.<br> -->
 <!-- 		 <b>[Aug. 2023]</b>  Honored to receive the prestigious <a target="_blank" href="https://ersp.cs.ucsb.edu/home">Early Research Scholarship</a>!<br> -->
 <!-- 	         <b>[June 2023]</b>  We released <a href="https://leandojo.org">LeanDojo</a>, an open-source playground for LLMs to prove formal theorems in Lean.<br> -->
-<!-- 	         <b>[May  2023]</b>  I am officially joining Caltech <a target="_blank" href="http://tensorlab.cms.caltech.edu/users/anima/">Anima AI + Science Lab</a>, working on neuro-symbolic reasoning and more!<br> -->
+<!-- 	         <b>[May  2023]</b>  I am joining Caltech <a target="_blank" href="http://tensorlab.cms.caltech.edu/users/anima/">Anima AI + Science Lab</a>, working on neuro-symbolic reasoning and more!<br> -->
 <!--             <b>[Apr. 2023]</b>  My research received the prestigious <a target="_blank" href="https://sfp.caltech.edu/undergraduate-research/programs/surf">Caltech SFP SURF Award</a>!<br> -->
-<!-- 	         <b>[Feb. 2023]</b>  I am officially joining <a target="_blank" href="https://www.arch.cs.ucsb.edu/">UCSB ArchLab</a>, working on energy-efficient machine learning and more!</p> -->
+<!-- 	         <b>[Feb. 2023]</b>  I am joining <a target="_blank" href="https://www.arch.cs.ucsb.edu/">UCSB ArchLab</a>, working on energy-efficient machine learning and more!</p> -->
             </td>
           </tr>
 		
@@ -138,6 +138,42 @@
               <p></p>
               <p>
                 LLMs struggling with long proofs? We present LeanProgress, which uses a novel critic model where “distance” to the goal state acts as a key signal for step prediction, boosting performance on neural theorem proving in Lean. Our method achieves 75.1% prediction accuracy, with a 3.8% gain in proof search with step prediction.
+              </p>
+            </td>
+          </tr>
+
+	  <tr onmouseout="delayspace_stop()" onmouseover="delayspace_start()">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='delaynet_image'>
+                  <img src='images/delayspace-1.png' width="150">
+                </div>
+                <img src='images/delayspace-2.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function delayspace_start() {
+                  document.getElementById('delayspace_image').style.opacity = "1";
+                }
+
+                function delayspace_stop() {
+                  document.getElementById('delayspace_image').style.opacity = "0";
+                }
+                delaynet_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/11082679">
+                <papertitle>Delay Space Arithmetic and Architecture</papertitle>
+              </a>
+              <br />
+	      <a target="_blank" href="https://www.linkedin.com/in/rhys-gretsch-462a951ab">Rhys Gretsch</a>, <strong>Peiyang Song</strong>, <a target="_blank" href="https://ieeexplore.ieee.org/author/38529297900">Advait Madhavan</a>, <a style="text-decoration: none" target="_blank" href="https://dl.acm.org/profile/81100206077">Jeremy Lau</a>, and <a style="text-decoration: none" target="_blank" href="https://www.arch.cs.ucsb.edu/prof-sherwood">Tim Sherwood</a>
+	      <br />
+              <em>IEEE Micro</em>, 2025, <font color="red"><strong>Top Picks</strong></font> From the 2024 Computer Architecture Conferences
+              <br />
+	      <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/11082679">proceeding</a>
+              <p></p>
+              <p>
+                What operations can you perform efficiently when you use the “time of arrival” of a signal’s edge to represent a number? We present negative-logarithmic delay space arithmetic as a completely new approach to temporal coding. Under this approach, general purpose arithmetic is transformed to a “soft” version of the standard temporal operations in such a way that preserves all of the algebraic identities. We further show that these soft operations can be approximated by composing the original “sharp” temporal operators, resulting in simple, energy efficient implementations.
               </p>
             </td>
           </tr>
@@ -336,7 +372,7 @@
                 <papertitle>Energy Efficient Convolutions with Temporal Arithmetic</papertitle>
               </a>
               <br />
-	      <a target="_blank" href="https://www.linkedin.com/in/rhys-gretsch-462a951ab">Rhys Gretsch</a>, <strong>Peiyang Song</strong>, <a target="_blank" href="https://ireap.umd.edu/clark/staff/1448/Advait-Madhavan">Advait Madhavan</a>, <a style="text-decoration: none" target="_blank" href="https://dl.acm.org/profile/81100206077">Jeremy Lau</a>, and <a style="text-decoration: none" target="_blank" href="https://www.arch.cs.ucsb.edu/prof-sherwood">Tim Sherwood</a>
+	      <a target="_blank" href="https://www.linkedin.com/in/rhys-gretsch-462a951ab">Rhys Gretsch</a>, <strong>Peiyang Song</strong>, <a target="_blank" href="https://ieeexplore.ieee.org/author/38529297900">Advait Madhavan</a>, <a style="text-decoration: none" target="_blank" href="https://dl.acm.org/profile/81100206077">Jeremy Lau</a>, and <a style="text-decoration: none" target="_blank" href="https://www.arch.cs.ucsb.edu/prof-sherwood">Tim Sherwood</a>
 	      <br />
               <em>ACM Int'l Conference on Architectural Support for Programming Languages and Operating Systems (ASPLOS)</em>, 2024
               <br />
