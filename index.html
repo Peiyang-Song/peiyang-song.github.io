@@ -112,38 +112,38 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-	  <tr onmouseout="delayspace_stop()" onmouseover="delayspace_start()" id="delayspace">
+	  <tr onmouseout="personality_stop()" onmouseover="personality_start()" id="personality">
             <td style="padding:5px;width:17%;vertical-align:middle">
               <div class="one">
-                <div class="two" id='delayspace_image'>
-                  <img src='images/delayspace-1.png' width="150">
+                <div class="two" id='personality_image'>
+                  <img src='images/personality-1.png' width="150">
                 </div>
-                <img src='images/delayspace-2.png' width="150">
+                <img src='images/personality-2.png' width="150">
               </div>
               <script type="text/javascript">
-                function delayspace_start() {
-                  document.getElementById('delayspace_image').style.opacity = "1";
+                function personality_start() {
+                  document.getElementById('personality_image').style.opacity = "1";
                 }
 
-                function delayspace_stop() {
-                  document.getElementById('delayspace_image').style.opacity = "0";
+                function personality_stop() {
+                  document.getElementById('personality_image').style.opacity = "0";
                 }
-                delayspace_stop()
+                personality_stop()
               </script>
             </td>
             <td style="padding:20px;width:83%;vertical-align:middle">
-              <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/11082679">
-                <papertitle>Delay Space Arithmetic and Architecture</papertitle>
+              <a target="_blank" href="https://openreview.net/forum?id=pdLNGgdO1A">
+                <papertitle>Tracing Human-like Traits in LLMs: Origins, Real-World Manifestation, and Controllability</papertitle>
               </a>
               <br />
-	      <a target="_blank" href="https://www.linkedin.com/in/rhys-gretsch-462a951ab">Rhys Gretsch</a>, <strong>Peiyang Song</strong>, <a target="_blank" href="https://ieeexplore.ieee.org/author/38529297900">Advait Madhavan</a>, <a style="text-decoration: none" target="_blank" href="https://dl.acm.org/profile/81100206077">Jeremy Lau</a>, and <a style="text-decoration: none" target="_blank" href="https://www.arch.cs.ucsb.edu/prof-sherwood">Tim Sherwood</a>
+	      <a target="_blank" href="https://pengruihan.github.io/">Pengrui Han</a>*, <a target="_blank" href="https://www.rkocielnik.com/">Rafal D. Kocielnik</a>*, <strong>Peiyang Song</strong>, <a target="_blank" href="https://www.collectivedesign.group.cam.ac.uk/">Ramit Debnath</a>, <a style="text-decoration: none" target="_blank" href="https://www.deanmobbslab.com/people">Dean Mobbs</a>, <a style="text-decoration: none" target="_blank" href="https://www.eas.caltech.edu/people/anima">Anima Anandkumar</a>, and <a style="text-decoration: none" target="_blank" href="https://www.rmichaelalvarez.com/">R. Michael Alvarez</a>
 	      <br />
-              <em>IEEE Micro</em>, 2025, <font color="red"><strong>Top Picks</strong></font>
+              <em>ICML Workshop on Models of Human Feedback for AI Alignment (MoFA)</em>, 2025
               <br />
-	      <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/11082679">proceeding</a>
+	      <a target="_blank" href="https://openreview.net/forum?id=pdLNGgdO1A">preprint</a>
               <p></p>
               <p>
-                What operations can you perform efficiently when you use the “time of arrival” of a signal’s edge to represent a number? We present negative-logarithmic delay space arithmetic as a completely new approach to temporal coding. Under this approach, general purpose arithmetic is transformed to a “soft” version of the standard temporal operations in such a way that preserves all of the algebraic identities.
+                We systematically characterize LLM personality across three dimensions: (1) the dynamic emergence and evolution of trait profiles throughout training stages; (2) the predictive validity of self-reported traits in behavioral tasks; and (3) the causal impact of targeted interventions, such as persona injection, on both self-reports and behavior; and present key insights about human-like traits in LLMs.
               </p>
             </td>
           </tr>
