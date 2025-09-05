@@ -119,6 +119,44 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+	  <tr onmouseout="llmrf_stop()" onmouseover="llmrf_start()" id="llmrf">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='llmrf_image'>
+                  <img src='images/llmrf-1.png' width="150">
+                </div>
+                <img src='images/llmrf-2.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function llmrf_start() {
+                  document.getElementById('llmrf_image').style.opacity = "1";
+                }
+
+                function llmrf_stop() {
+                  document.getElementById('llmrf_image').style.opacity = "0";
+                }
+                llmrf_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://openreview.net/forum?id=hsgMn4KBFG">
+                <papertitle>A Survey on Large Language Model Reasoning Failures</papertitle>
+              </a>
+              <br />
+	     <strong>Peiyang Song</strong>*, <a target="_blank" href="https://pengrui-han.github.io/">Pengrui Han</a>*, and <a target="_blank" href="https://cocolab.stanford.edu/ndg">Noah Goodman</a> (* <strong>Equal Contribution</strong>)
+	      <br />
+              <em>ICML AI for Math Workshop</em>, 2025
+              <br />
+	      <a target="_blank" href="https://openreview.net/forum?id=hsgMn4KBFG">preprint</a>
+		      /
+		  full release coming soon
+              <p></p>
+              <p>
+                We present the first comprehensive survey dedicated to reasoning failures in LLMs. By unifying fragmented research efforts, our survey provides a structured perspective on systemic weaknesses in LLM reasoning, offering valuable insights and guiding future research towards building stronger, more reliable, and robust reasoning capabilities.
+              </p>
+            </td>
+          </tr>
+
 	  <tr onmouseout="personality_stop()" onmouseover="personality_start()" id="personality">
             <td style="padding:5px;width:17%;vertical-align:middle">
               <div class="one">
@@ -155,44 +193,6 @@
               <p></p>
               <p>
                 We systematically characterize LLM personality across three dimensions: (1) the dynamic emergence and evolution of trait profiles throughout training stages; (2) the predictive validity of self-reported traits in behavioral tasks; and (3) the causal impact of targeted interventions, such as persona injection, on both self-reports and behavior; and present key insights about human-like traits in LLMs.
-              </p>
-            </td>
-          </tr>
-
-	  <tr onmouseout="llmrf_stop()" onmouseover="llmrf_start()" id="llmrf">
-            <td style="padding:5px;width:17%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='llmrf_image'>
-                  <img src='images/llmrf-1.png' width="150">
-                </div>
-                <img src='images/llmrf-2.png' width="150">
-              </div>
-              <script type="text/javascript">
-                function llmrf_start() {
-                  document.getElementById('llmrf_image').style.opacity = "1";
-                }
-
-                function llmrf_stop() {
-                  document.getElementById('llmrf_image').style.opacity = "0";
-                }
-                llmrf_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:83%;vertical-align:middle">
-              <a target="_blank" href="https://openreview.net/forum?id=hsgMn4KBFG">
-                <papertitle>A Survey on Large Language Model Reasoning Failures</papertitle>
-              </a>
-              <br />
-	     <strong>Peiyang Song</strong>*, <a target="_blank" href="https://pengrui-han.github.io/">Pengrui Han</a>*, and <a target="_blank" href="https://cocolab.stanford.edu/ndg">Noah Goodman</a> (* <strong>Equal Contribution</strong>)
-	      <br />
-              <em>ICML AI for Math Workshop</em>, 2025
-              <br />
-	      <a target="_blank" href="https://openreview.net/forum?id=hsgMn4KBFG">preprint</a>
-		      /
-		  full release coming soon
-              <p></p>
-              <p>
-                We present the first comprehensive survey dedicated to reasoning failures in LLMs. By unifying fragmented research efforts, our survey provides a structured perspective on systemic weaknesses in LLM reasoning, offering valuable insights and guiding future research towards building stronger, more reliable, and robust reasoning capabilities.
               </p>
             </td>
           </tr>
