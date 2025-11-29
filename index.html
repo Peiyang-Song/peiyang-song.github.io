@@ -205,6 +205,60 @@
             </td>
           </tr>
 
+          <tr onmouseout="lean_copilot_stop()" onmouseover="lean_copilot_start()" id="leancopilot">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='lean_copilot_image'>
+                  <img src='images/lean_copilot-1.png' width="150">
+                </div>
+                <img src='images/lean_copilot-2.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function lean_copilot_start() {
+                  document.getElementById('lean_copilot_image').style.opacity = "1";
+                }
+
+                function lean_copilot_stop() {
+                  document.getElementById('lean_copilot_image').style.opacity = "0";
+                }
+                lean_copilot_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://leandojo.org/leancopilot.html">
+                <papertitle>Lean Copilot: Large Language Models as Copilots for Theorem Proving in Lean</papertitle>
+              </a>
+              <br />
+              <strong>Peiyang Song</strong>, <a target="_blank" href="https://yangky11.github.io/">Kaiyu Yang</a>, and <a target="_blank" href="http://tensorlab.cms.caltech.edu/users/anima/">Anima Anandkumar</a>
+              <br />
+              <em>International Conference on Neuro-Symbolic Systems (NeuS)</em>, 2025
+              <br />
+              <font color="red"><strong>1.2k+ stars on Github, ranking 2nd (only after Mathlib4) among all Lean projects</strong></font>
+              <br />
+              <a target="_blank" href="https://arxiv.org/abs/2404.12534">arXiv</a>
+			  /
+			  <a target="_blank" href="https://leandojo.org/leancopilot.html">project</a>
+              /
+              <a target="_blank" href="https://github.com/lean-dojo/LeanCopilot">code</a>
+			  /
+			  <a target="_blank" href="https://neus-2025.github.io/files/papers/paper_33.pdf">proceeding</a>
+              /
+              <a target="_blank" href="data/lean_copilot_poster.pdf">poster</a>
+              /
+              <a target="_blank" href="https://www.youtube.com/watch?v=RJJN45cjDrI">demo</a>
+              /
+              <a target="_blank" href="data/lean_copilot_slides.pdf">slides</a>
+              /
+              <a target="_blank" href="data/Neuro-Symbolic Theorem Proving with Lean.pdf">tutorial</a>
+              /
+              <a target="_blank" href="https://www.marktechpost.com/2024/07/30/lean-copilot-an-ai-tool-that-allows-large-language-models-llms-to-be-used-in-lean-for-proof-automation/">media</a>
+              <p></p>
+              <p>
+                We introduce Lean Copilot, a framework for running neural network inference directly in Lean. It enables various LLM-based proof automation tools that integrate seamlessly into the workflow of Lean users, including tools for suggesting proof steps (tactics), selecting premises, and searching for complete proofs using LLMs.
+              </p>
+            </td>
+          </tr>
+
           <tr onmouseout="delayspace_stop()" onmouseover="delayspace_start()" id="delayspace">
             <td style="padding:5px;width:17%;vertical-align:middle">
               <div class="one">
@@ -321,60 +375,6 @@
               <p></p>
               <p>
                 LeanAgent continuously learns and improves on ever-expanding mathematical knowledge without forgetting what it learned before. It has a curriculum learning strategy that optimizes the learning trajectory in terms of mathematical difficulty, a dynamic database for efficient management of evolving mathematical knowledge, and progressive training to balance stability and plasticity.
-              </p>
-            </td>
-          </tr>
-
-          <tr onmouseout="lean_copilot_stop()" onmouseover="lean_copilot_start()" id="leancopilot">
-            <td style="padding:5px;width:17%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='lean_copilot_image'>
-                  <img src='images/lean_copilot-1.png' width="150">
-                </div>
-                <img src='images/lean_copilot-2.png' width="150">
-              </div>
-              <script type="text/javascript">
-                function lean_copilot_start() {
-                  document.getElementById('lean_copilot_image').style.opacity = "1";
-                }
-
-                function lean_copilot_stop() {
-                  document.getElementById('lean_copilot_image').style.opacity = "0";
-                }
-                lean_copilot_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:83%;vertical-align:middle">
-              <a target="_blank" href="https://leandojo.org/leancopilot.html">
-                <papertitle>Lean Copilot: Large Language Models as Copilots for Theorem Proving in Lean</papertitle>
-              </a>
-              <br />
-              <strong>Peiyang Song</strong>, <a target="_blank" href="https://yangky11.github.io/">Kaiyu Yang</a>, and <a target="_blank" href="http://tensorlab.cms.caltech.edu/users/anima/">Anima Anandkumar</a>
-              <br />
-              <em>International Conference on Neuro-Symbolic Systems (NeuS)</em>, 2025
-              <br />
-              <font color="red"><strong>1.2k+ stars on Github, ranking 2nd (only after Mathlib4) among all Lean projects</strong></font>
-              <br />
-              <a target="_blank" href="https://arxiv.org/abs/2404.12534">arXiv</a>
-			  /
-			  <a target="_blank" href="https://leandojo.org/leancopilot.html">project</a>
-              /
-              <a target="_blank" href="https://github.com/lean-dojo/LeanCopilot">code</a>
-			  /
-			  <a target="_blank" href="https://neus-2025.github.io/files/papers/paper_33.pdf">proceeding</a>
-              /
-              <a target="_blank" href="data/lean_copilot_poster.pdf">poster</a>
-              /
-              <a target="_blank" href="https://www.youtube.com/watch?v=RJJN45cjDrI">demo</a>
-              /
-              <a target="_blank" href="data/lean_copilot_slides.pdf">slides</a>
-              /
-              <a target="_blank" href="data/Neuro-Symbolic Theorem Proving with Lean.pdf">tutorial</a>
-              /
-              <a target="_blank" href="https://www.marktechpost.com/2024/07/30/lean-copilot-an-ai-tool-that-allows-large-language-models-llms-to-be-used-in-lean-for-proof-automation/">media</a>
-              <p></p>
-              <p>
-                We introduce Lean Copilot, a framework for running neural network inference directly in Lean. It enables various LLM-based proof automation tools that integrate seamlessly into the workflow of Lean users, including tools for suggesting proof steps (tactics), selecting premises, and searching for complete proofs using LLMs.
               </p>
             </td>
           </tr>
