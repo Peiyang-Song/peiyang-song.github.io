@@ -423,6 +423,46 @@
             </td>
           </tr>
 
+          <tr onmouseout="a_not_b_stop()" onmouseover="a_not_b_start()" id="a_not_b">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='a_not_b_image'>
+                  <img src='images/a_not_b-1.png' width="150">
+                </div>
+                <img src='images/a_not_b-2.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function a_not_b_start() {
+                  document.getElementById('a_not_b_image').style.opacity = "1";
+                }
+
+                function a_not_b_stop() {
+                  document.getElementById('a_not_b_image').style.opacity = "0";
+                }
+                a_not_b_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://arxiv.org/abs/2409.15454">
+                <papertitle>In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-B Errors in Pretrained Language Models</papertitle>
+              </a>
+              <br />
+              <a target="_blank" href="https://pengrui-han.github.io/">Pengrui Han</a>*, <strong>Peiyang Song</strong>*, <a target="_blank" href="https://haofeiyu.me/">Haofei Yu</a>, and <a target="_blank" href="https://cs.stanford.edu/~jiaxuan/">Jiaxuan You</a> (* <strong>Equal Contribution</strong>)
+              <br />
+              <em>Findings of Empirical Methods in Natural Language Processing (EMNLP)</em>, 2024
+              <br />
+              <a target="_blank" href="https://arxiv.org/abs/2409.15454">arXiv</a>
+              /
+              <a target="_blank" href="https://github.com/Peiyang-Song/LLM-A-Not-B-Errors">code</a>
+              /
+              <a target="_blank" href="https://aclanthology.org/2024.findings-emnlp.322/">proceeding</a>
+              <p></p>
+              <p>
+                Motivated by the crucial cognitive phenomenon of A-not-B errors, we present the first systematic evaluation on the surprisingly vulnerable inhibitory control abilities of LLMs. We reveal that this weakness undermines LLMs' trustworthy reasoning capabilities across diverse domains, and introduce various mitigations.
+              </p>
+            </td>
+          </tr>
+
           <tr onmouseout="idiom_stop()" onmouseover="idiom_start()" id="idiom">
             <td style="padding:5px;width:17%;vertical-align:middle">
               <div class="one">
@@ -461,46 +501,6 @@
               <p></p>
               <p>
                 To compile a dictionary of East Asian idiom translations demands much time and creativity even for expert translators. To alleviate such burden, we automate high-quality data generation with GPT-4, and discover Pareto-optimal prompting strategies on both faithfulness and creativity, outperforming existing translation engines and human baseline.
-              </p>
-            </td>
-          </tr>
-
-          <tr onmouseout="a_not_b_stop()" onmouseover="a_not_b_start()" id="a_not_b">
-            <td style="padding:5px;width:17%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='a_not_b_image'>
-                  <img src='images/a_not_b-1.png' width="150">
-                </div>
-                <img src='images/a_not_b-2.png' width="150">
-              </div>
-              <script type="text/javascript">
-                function a_not_b_start() {
-                  document.getElementById('a_not_b_image').style.opacity = "1";
-                }
-
-                function a_not_b_stop() {
-                  document.getElementById('a_not_b_image').style.opacity = "0";
-                }
-                a_not_b_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:83%;vertical-align:middle">
-              <a target="_blank" href="https://arxiv.org/abs/2409.15454">
-                <papertitle>In-Context Learning May Not Elicit Trustworthy Reasoning: A-Not-B Errors in Pretrained Language Models</papertitle>
-              </a>
-              <br />
-              <a target="_blank" href="https://pengrui-han.github.io/">Pengrui Han</a>*, <strong>Peiyang Song</strong>*, <a target="_blank" href="https://haofeiyu.me/">Haofei Yu</a>, and <a target="_blank" href="https://cs.stanford.edu/~jiaxuan/">Jiaxuan You</a> (* <strong>Equal Contribution</strong>)
-              <br />
-              <em>Findings of Empirical Methods in Natural Language Processing (EMNLP)</em>, 2024
-              <br />
-              <a target="_blank" href="https://arxiv.org/abs/2409.15454">arXiv</a>
-              /
-              <a target="_blank" href="https://github.com/Peiyang-Song/LLM-A-Not-B-Errors">code</a>
-              /
-              <a target="_blank" href="https://aclanthology.org/2024.findings-emnlp.322/">proceeding</a>
-              <p></p>
-              <p>
-                Motivated by the crucial cognitive phenomenon of A-not-B errors, we present the first systematic evaluation on the surprisingly vulnerable inhibitory control abilities of LLMs. We reveal that this weakness undermines LLMs' trustworthy reasoning capabilities across diverse domains, and introduce various mitigations.
               </p>
             </td>
           </tr>
