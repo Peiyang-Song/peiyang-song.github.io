@@ -42,13 +42,18 @@
                 宋沛洋 &nbsp/&nbsp
                 <a target="_blank" href="mailto:psong@caltech.edu">Email</a> &nbsp/&nbsp
                 <a target="_blank" href="data/Peiyang_Song_CV.pdf">CV</a> &nbsp/&nbsp
-                <a target="_blank" href="data/Bio.txt">Bio</a> &nbsp/&nbsp
+                <button type="button" class="linklike bio-trigger" id="bio-trigger" aria-expanded="false" aria-controls="bio-panel" aria-label="Show third-person bio">Bio</button> &nbsp/&nbsp
                 <a target="_blank" href="https://scholar.google.com/citations?user=E1j11NQAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
                 <a target="_blank" href="https://github.com/Peiyang-Song">GitHub</a> &nbsp/&nbsp
                 <a target="_blank" href="https://www.linkedin.com/in/peiyang-song-3279b3251/">LinkedIn</a> &nbsp/&nbsp
                 <a target="_blank" href="https://twitter.com/p_song1">Twitter</a> &nbsp/&nbsp
 				<a target="_blank" href="https://www.instagram.com/p_song319/?hl=en">Instagram</a> 
               </p>
+              <div id="bio-panel" class="bio-inline-panel" role="region" aria-labelledby="bio-trigger" aria-hidden="true">
+                <div class="bio-inline-panel-inner">
+                  <p class="bio-inline-text" id="bio-text"></p>
+                </div>
+              </div>
             </td>
             <td style="padding:2.5%;width:33%;max-width:33%">
               <a href="images/Peiyang Song.png"><img style="width:100%;max-width:100%" alt="profile photo" src="images/Peiyang Song - Circle.png" class="hoverZoomLink"></a>
@@ -676,6 +681,51 @@
       </td>
     </tr>
   </table>
+  <script>
+    (function () {
+      var trigger = document.getElementById('bio-trigger');
+      var panel = document.getElementById('bio-panel');
+      var textEl = document.getElementById('bio-text');
+      if (!trigger || !panel || !textEl) return;
+
+      var loaded = false;
+      function loadBio() {
+        if (loaded) return Promise.resolve();
+        textEl.textContent = 'Loading…';
+        return fetch('data/Bio.txt')
+          .then(function (r) {
+            if (!r.ok) throw new Error('fetch failed');
+            return r.text();
+          })
+          .then(function (t) {
+            textEl.textContent = t.trim();
+            loaded = true;
+          })
+          .catch(function () {
+            textEl.innerHTML = 'Could not load the bio. You can still open it as a file: <a href="data/Bio.txt">Bio.txt</a>.';
+            loaded = true;
+          });
+      }
+
+      function setOpen(open) {
+        panel.classList.toggle('is-open', open);
+        panel.setAttribute('aria-hidden', !open);
+        trigger.setAttribute('aria-expanded', open);
+        trigger.setAttribute('aria-label', open ? 'Hide third-person bio' : 'Show third-person bio');
+        if (open) loadBio();
+      }
+
+      trigger.addEventListener('click', function () {
+        setOpen(!panel.classList.contains('is-open'));
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && panel.classList.contains('is-open')) {
+          setOpen(false);
+        }
+      });
+    })();
+  </script>
 </body>
 	
 </html>

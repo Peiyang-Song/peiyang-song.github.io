@@ -129,3 +129,67 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+/* Inline bio (toggle below contact links) */
+button.linklike {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  color: #1772d0;
+  cursor: pointer;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+button.linklike:hover,
+button.linklike:focus {
+  color: #f09228;
+}
+
+button.linklike:focus-visible {
+  outline: 2px solid #1772d0;
+  outline-offset: 2px;
+}
+
+.bio-inline-panel {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 0;
+  transition: max-height 0.45s ease, opacity 0.3s ease, margin-top 0.3s ease;
+}
+
+.bio-inline-panel.is-open {
+  max-height: 80rem;
+  opacity: 1;
+  margin-top: 0.85rem;
+}
+
+.bio-inline-panel-inner {
+  max-width: 42em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.05rem 1.35rem;
+  background: #f6f7f9;
+  border-left: 3px solid #1772d0;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.bio-inline-text {
+  margin: 0;
+  line-height: 1.58;
+  color: #2c2c2c;
+  font-size: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bio-inline-panel {
+    transition: none;
+  }
+}
