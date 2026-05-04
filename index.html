@@ -143,6 +143,47 @@
             </td>
           </tr>
 
+          <tr onmouseout="personality_stop()" onmouseover="personality_start()" id="personality">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='personality_image'>
+                  <img src='images/personality-1.png' width="150">
+                </div>
+                <img src='images/personality-2.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function personality_start() {
+                  document.getElementById('personality_image').style.opacity = "1";
+                }
+                function personality_stop() {
+                  document.getElementById('personality_image').style.opacity = "0";
+                }
+                personality_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://psychology-of-ai.github.io/">
+                <papertitle>The Personality Illusion: Revealing Dissociation Between Self-Reports & Behavior in LLMs</papertitle>
+              </a>
+              <br />
+              <a target="_blank" href="https://pengrui-han.github.io/">Pengrui Han</a>*, <a target="_blank" href="https://www.rkocielnik.com/">Rafal D. Kocielnik</a>*, <strong>Peiyang Song</strong>, <a target="_blank" href="https://www.collectivedesign.group.cam.ac.uk/">Ramit Debnath</a>, <a style="text-decoration: none" target="_blank" href="https://www.deanmobbslab.com/people">Dean Mobbs</a>, <a style="text-decoration: none" target="_blank" href="https://www.eas.caltech.edu/people/anima">Anima Anandkumar</a>, and <a style="text-decoration: none" target="_blank" href="https://www.rmichaelalvarez.com/">R. Michael Alvarez</a> (* Equal Contribution)
+              <br />
+              <em>International Conference on Machine Learning (ICML)</em>, 2026
+              <br />
+              <a target="_blank" href="https://arxiv.org/abs/2509.03730">arXiv</a>
+              /
+              <a target="_blank" href="https://psychology-of-ai.github.io/">project</a>
+              /
+              <a target="_blank" href="https://github.com/psychology-of-AI/Personality-Illusion">code</a>
+              /
+              <a target="_blank" href="https://wap.mittrchina.com/news/detail/15459">media</a>
+              <p></p>
+              <p>
+                LLMs say they have personalities, but they don’t act like it. Alignment today shapes language, not behavior. This linguistic–behavioral dissociation cautions against equating coherent self-reports with cognitive depth. 
+              </p>
+            </td>
+          </tr>
+
 		  <tr onmouseout="adaptation_stop()" onmouseover="adaptation_start()" id="adaptation">
             <td style="padding:5px;width:17%;vertical-align:middle">
               <div class="one">
@@ -215,47 +256,6 @@
               <p></p>
               <p>
                 We conduct an initial exploration into people's formalization process with and without AI. We collect more than 80 hours of video from seven participants formalizing informal proofs with and without AI on a range of mathematical problems covering different levels of difficulty and domains. We offer a first characterization of people's formalization process, noting places where AI assistance helps, and a few instances where it may hurt.
-              </p>
-            </td>
-          </tr>
-
-          <tr onmouseout="personality_stop()" onmouseover="personality_start()" id="personality">
-            <td style="padding:5px;width:17%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='personality_image'>
-                  <img src='images/personality-1.png' width="150">
-                </div>
-                <img src='images/personality-2.png' width="150">
-              </div>
-              <script type="text/javascript">
-                function personality_start() {
-                  document.getElementById('personality_image').style.opacity = "1";
-                }
-                function personality_stop() {
-                  document.getElementById('personality_image').style.opacity = "0";
-                }
-                personality_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:83%;vertical-align:middle">
-              <a target="_blank" href="https://psychology-of-ai.github.io/">
-                <papertitle>The Personality Illusion: Revealing Dissociation Between Self-Reports & Behavior in LLMs</papertitle>
-              </a>
-              <br />
-              <a target="_blank" href="https://pengrui-han.github.io/">Pengrui Han</a>*, <a target="_blank" href="https://www.rkocielnik.com/">Rafal D. Kocielnik</a>*, <strong>Peiyang Song</strong>, <a target="_blank" href="https://www.collectivedesign.group.cam.ac.uk/">Ramit Debnath</a>, <a style="text-decoration: none" target="_blank" href="https://www.deanmobbslab.com/people">Dean Mobbs</a>, <a style="text-decoration: none" target="_blank" href="https://www.eas.caltech.edu/people/anima">Anima Anandkumar</a>, and <a style="text-decoration: none" target="_blank" href="https://www.rmichaelalvarez.com/">R. Michael Alvarez</a> (* Equal Contribution)
-              <br />
-              <em>International Conference on Machine Learning (ICML)</em>, 2026
-              <br />
-              <a target="_blank" href="https://arxiv.org/abs/2509.03730">arXiv</a>
-              /
-              <a target="_blank" href="https://psychology-of-ai.github.io/">project</a>
-              /
-              <a target="_blank" href="https://github.com/psychology-of-AI/Personality-Illusion">code</a>
-              /
-              <a target="_blank" href="https://wap.mittrchina.com/news/detail/15459">media</a>
-              <p></p>
-              <p>
-                LLMs say they have personalities, but they don’t act like it. Alignment today shapes language, not behavior. This linguistic–behavioral dissociation cautions against equating coherent self-reports with cognitive depth. 
               </p>
             </td>
           </tr>
