@@ -143,6 +143,43 @@
             </td>
           </tr>
 
+		  <tr onmouseout="interactive_stop()" onmouseover="interactive_start()" id="interactive">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='interactive_image'>
+                  <img src='images/interactive-1.png' width="150">
+                </div>
+                <img src='images/interactive-2.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function interactive_start() {
+                  document.getElementById('interactive_image').style.opacity = "1";
+                }
+                function interactive_stop() {
+                  document.getElementById('interactive_image').style.opacity = "0";
+                }
+                interactive_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://arxiv.org/abs/2605.17829">
+                <papertitle>Interactive Evaluation Requires a Design Science</papertitle>
+              </a>
+              <br />
+              <a target="_blank" href="https://keyangds.github.io/">Keyang Xuan</a>*, <strong>Peiyang Song</strong>*, <a target="_blank" href="https://lupantech.github.io/">Pan Lu</a>, <a target="_blank" href="https://pengrui-han.github.io/">Pengrui Han</a>, <a target="_blank" href="https://wenkai-li.github.io/">Wenkai Li</a>, <a target="_blank" href="https://www.linkedin.com/in/zhenyu-z-629625253/">Zhenyu Zhang</a>, <a target="_blank" href="https://zexuehe.github.io/">Zexue He</a>, <a target="_blank" href="https://wenyueh.github.io/en/">Wenyue Hua</a>, <a target="_blank" href="https://scholar.google.com/citations?user=6U4SXnUAAAAJ">Manling Li</a>, <a target="_blank" href="https://scholar.google.com/citations?user=NDbMl7oAAAAJ">Jiaxuan You</a>, <a target="_blank" href="https://scholar.google.com/citations?user=6U4SXnUAAAAJ">Manling Li</a>, <a target="_blank" href="https://mlg.eng.cam.ac.uk/adrian/">Adrian Weller</a>, <a target="_blank" href="http://scholar.google.com/citations?user=y5zpqdAAAAAJ">Yizhong Wang</a>†, and <a target="_blank" href="https://jiaxin-pei.github.io/">Jiaxin Pei</a>† (* <strong>Equal Contribution</strong>, † Equal Advising)
+              <br />
+              <em>Preprint</em>, 2026
+              <br />
+			  <a target="_blank" href="https://arxiv.org/abs/2605.17829">arXiv</a>
+			  /
+              <a target="_blank" href="https://github.com/keyangds/interactive_evaluation">code</a>
+              <p></p>
+              <p>
+                AI evaluation is increasingly moving beyond static responses toward systems that act through tools, environments, users, and other agents. But the field risks adding interaction faster than it develops the scientific foundations for evaluating interaction. We argue that interactive evaluation needs a design science, not just more agent benchmarks. We define interactive evaluation, propose a 2-axis taxonomy, and outline principles for designing evaluations that are interpretable, comparable, and scientifically useful.
+              </p>
+            </td>
+          </tr>
+
           <tr onmouseout="personality_stop()" onmouseover="personality_start()" id="personality">
             <td style="padding:5px;width:17%;vertical-align:middle">
               <div class="one">
