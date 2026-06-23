@@ -141,6 +141,45 @@
             </td>
           </tr>
 
+          <tr onmouseout="psychometric_stop()" onmouseover="psychometric_start()" id="psychometric">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='psychometric_image'>
+                  <img src='images/rethinking-1.png' width="150">
+                </div>
+                <img src='images/rethinking-2.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function psychometric_start() {
+                  document.getElementById('psychometric_image').style.opacity = "1";
+                }
+                function psychometric_stop() {
+                  document.getElementById('psychometric_image').style.opacity = "0";
+                }
+                psychometric_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://arxiv.org/abs/2606.12730">
+                <papertitle>Rethinking Psychometric Evaluation of LLMs: When and Why Self-Reports Predict Behavior</papertitle>
+              </a>
+              <br />
+              <a target="_blank" href="https://www.rkocielnik.com/">Rafal D. Kocielnik</a>, <a target="_blank" href="https://pengrui-han.github.io/">Pengrui Han</a>, <strong>Peiyang Song</strong>, <a target="_blank" href="https://myrl.marmarel.is/">Myrl G. Marmarelis</a>, <a target="_blank" href="https://www.chia.cam.ac.uk/team/ramit-debnath">Ramit Debnath</a>, <a target="_blank" href="https://www.deanmobbslab.com/people">Dean Mobbs</a>, <a target="_blank" href="https://www.eas.caltech.edu/people/anima">Anima Anandkumar</a>, and <a target="_blank" href="https://www.rmichaelalvarez.com/">R. Michael Alvarez</a>
+              <br />
+              <em>ICML Workshop on Combining Theory and Benchmarks (CTB)</em>, 2026, <font color="red"><strong>Oral Presentation</strong></font>
+              <br />
+              <a target="_blank" href="https://arxiv.org/abs/2606.12730">arXiv</a>
+              /
+              <a target="_blank" href="https://psychology-of-ai.github.io/psychometric-evaluation.html">project</a>
+              /
+              <a target="_blank" href="https://github.com/psychology-of-AI/Rethinking-Pyschometric-Eval-LLMs">code</a>
+              <p></p>
+              <p>
+                Anticipating LLM behavioral tendencies from low-cost psychometric probes is critical for safe deployment, but only if self-reports reliably predict behavior. We compare broad Big 5 traits with the Theory of Planned Behavior, which targets intentions toward specific behaviors and better predicts when self-reports translate into action.
+              </p>
+            </td>
+          </tr>
+
           <tr onmouseout="leanuser_stop()" onmouseover="leanuser_start()" id="leanuser">
             <td style="padding:5px;width:17%;vertical-align:middle">
               <div class="one">
@@ -469,6 +508,41 @@
               <p></p>
               <p>
                 Cutting-edge agentic AI systems are built on foundation models that can be adapted to plan, reason, and interact with external tools to perform increasingly complex and specialized tasks. As these systems grow in capability and scope, adaptation becomes a central mechanism for improving performance, reliability, and generalization. In this paper, we unify the rapidly expanding research landscape into a systematic framework that spans both agent adaptations and tool adaptations.
+              </p>
+            </td>
+          </tr>
+
+          <tr onmouseout="generalization_stop()" onmouseover="generalization_start()" id="generalization">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='generalization_image'>
+                  <img src='images/generalization-1.png' width="150">
+                </div>
+                <img src='images/generalization-2.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function generalization_start() {
+                  document.getElementById('generalization_image').style.opacity = "1";
+                }
+                function generalization_stop() {
+                  document.getElementById('generalization_image').style.opacity = "0";
+                }
+                generalization_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://arxiv.org/abs/2512.24063">
+                <papertitle>How and Why LLMs Generalize: A Fine-Grained Analysis of LLM Reasoning from Cognitive Behaviors to Low-Level Patterns</papertitle>
+              </a>
+              <br />
+              <a target="_blank" href="https://haoyuebaizju.github.io/">Haoyue Bai</a>, <a target="_blank" href="https://sunyiyou.github.io/">Yiyou Sun</a>, <a target="_blank" href="https://www.linkedin.com/in/wenjie-hu-908a26296">Wenjie Hu</a>, <a target="_blank" href="https://stephenqsstarthomas.github.io/">Shi Qiu</a>, <a target="_blank" href="https://ibisbill.github.io/">Maggie Ziyu Huan</a>, <strong>Peiyang Song</strong>, <a target="_blank" href="https://nowak.ece.wisc.edu/">Robert Nowak</a>, and <a target="_blank" href="https://dawnsong.io/">Dawn Song</a>
+              <br />
+              <em>Preprint</em>, 2025
+              <br />
+              <a target="_blank" href="https://arxiv.org/abs/2512.24063">arXiv</a>
+              <p></p>
+              <p>
+                LLMs show sharply different generalization behaviors: supervised fine-tuning often narrows capability, while reinforcement-learning tuning tends to preserve it. We introduce a benchmark that decomposes reasoning into atomic skills such as calculation, fact retrieval, simulation, enumeration, and diagnosis, enabling fine-grained analysis beyond coarse accuracy metrics.
               </p>
             </td>
           </tr>
