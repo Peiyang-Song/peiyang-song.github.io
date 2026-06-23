@@ -217,6 +217,41 @@
             </td>
           </tr>
 			
+          <tr onmouseout="s2a_stop()" onmouseover="s2a_start()" id="s2a">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='s2a_image'>
+                  <img src='images/s2a-1.png' width="150">
+                </div>
+                <img src='images/s2a-2.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function s2a_start() {
+                  document.getElementById('s2a_image').style.opacity = "1";
+                }
+                function s2a_stop() {
+                  document.getElementById('s2a_image').style.opacity = "0";
+                }
+                s2a_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://arxiv.org/abs/2602.07276">
+                <papertitle>Steer2Adapt: Dynamically Composing Steering Vectors Elicits Efficient Adaptation of LLMs</papertitle>
+              </a>
+              <br />
+              <a target="_blank" href="https://pengrui-han.github.io/">Pengrui Han</a>*, <a target="_blank" href="https://patrick-xu-py.github.io/xueqiang_patrick_xu/">Xueqiang Xu</a>*, <a target="_blank" href="https://keyangds.github.io/">Keyang Xuan</a>*, <strong>Peiyang Song</strong>, <a target="_blank" href="https://siruo2.notion.site/">Siru Ouyang</a>, <a target="_blank" href="https://runchu-tian.github.io/">Runchu Tian</a>, <a target="_blank" href="https://www.linkedin.com/in/yuqing-jiang-b41719281/">Yuqing Jiang</a>, <a target="_blank" href="https://qiancheng0.github.io/">Qian Cheng</a>, <a target="_blank" href="https://pat-jj.github.io/">Pengcheng Jiang</a>, <a target="_blank" href="https://gasolsun36.github.io/">Jiashuo Sun</a>, <a target="_blank" href="https://github.com/airevo2">Junxia Cui</a>, <a target="_blank" href="https://maszhongming.github.io/">Ming Zhong</a>, <a target="_blank" href="https://www.mit.edu/~geliu/">Ge Liu</a>, <a target="_blank" href="https://hanj.cs.illinois.edu/">Jiawei Han</a>, and <a target="_blank" href="https://cs.stanford.edu/~jiaxuan/">Jiaxuan You</a> (* Equal Contribution)
+              <br />
+              <em>ICLR Workshop on Representational Alignment (Re-Align)</em>, 2026
+              <br />
+              <a target="_blank" href="https://arxiv.org/abs/2602.07276">arXiv</a>
+              <p></p>
+              <p>
+                Steer2Adapt adapts LLMs by composing reusable steering vectors instead of learning new task-specific directions from scratch. With only a handful of examples, it dynamically discovers combinations of semantic basis vectors for reasoning and safety tasks, yielding data-efficient, stable, and transparent inference-time adaptation.
+              </p>
+            </td>
+          </tr>
+
           <tr onmouseout="llmrf_stop()" onmouseover="llmrf_start()" id="llmrf">
             <td style="padding:5px;width:17%;vertical-align:middle">
               <div class="one">
