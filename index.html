@@ -26,6 +26,17 @@
 </head>
 
 <body>
+  <nav class="section-nav" aria-label="Page sections">
+    <div class="section-nav-inner">
+      <a href="#research">Research</a>
+      <a href="#media">Media</a>
+      <a href="#awards">Awards</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#service">Service</a>
+      <a href="#misc">Misc</a>
+    </div>
+  </nav>
+
   <table style="width:100%;max-width:1050px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
     <tr style="padding:0px">
       <td style="padding:0px">
@@ -82,7 +93,7 @@
 		  <tbody>
 		    <tr>
 		      <td style="padding:20px;width:100%;vertical-align:middle">
-		        <heading>Research</heading>
+		        <heading id="research">Research</heading>
 		        <p>
 				      I study <strong>machine reasoning</strong>, in both <i>formal</i> and <i>informal</i> worlds: how AI systems can derive conclusions, act on them, evolve as tasks drift, and remain reliable when settings become complex.
 				    </p>
@@ -749,7 +760,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
-              <heading>Selected Media</heading>
+              <heading id="media">Selected Media</heading>
               <p>My research has been covered by many media. Some representative ones include:</p>
               <ul>
                 <li><a target="_blank" href="https://www.livescience.com/technology/artificial-intelligence/not-how-you-build-a-digital-mind-reasoning-failures-are-preventing-ai-models-from-achieving-human-level-intelligence">'Not how you build a digital mind': How reasoning failures are preventing AI models from achieving human-level intelligence</a>, Live Science, 2026</li>
@@ -769,7 +780,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
-              <heading>Selected Academic Awards</heading>
+              <heading id="awards">Selected Academic Awards</heading>
               <ul>
                 <li>EACL <b>Outstanding Reviewer</b> Award (2026)</li>
                 <li>TMLR <b>Survey Certification</b> (2026)</li>
@@ -786,7 +797,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
-              <heading>Teaching</heading>
+              <heading id="teaching">Teaching</heading>
               <ul>
                 <li><a target="_blank" href="https://www.cms.caltech.edu/academics/courses/cs-38">CS 38/138: Algorithms</a>, Teaching Assistant @ California Institute of Technology, Spring 2026</li>
                 <li><a target="_blank" href="https://www.cms.caltech.edu/academics/courses/mecsee-133-ab">ME/CS/EE 133B: Robotics - Planning</a>, Teaching Assistant @ California Institute of Technology, Winter 2026</li>
@@ -799,7 +810,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
-              <heading>Academic Services</heading>
+              <heading id="service">Academic Services</heading>
               <ul>
                 <li><strong>Reviewer</strong> @ NeurIPS, ICLR, COLM, ACM Computing Surveys, ARR, ACL, EMNLP, NAACL, EACL, AACL, IJCNLP, etc.</li>
               </ul>
@@ -811,7 +822,7 @@
 		  <tbody>
 		    <tr>
 		      <td>
-		        <heading>Miscellaneous</heading>
+		        <heading id="misc">Miscellaneous</heading>
 		        <p>I enjoy long walks, running, cycling, and badminton. I also love reading and writing, and sharing good meals with friends. When I’m on vacation, I like traveling, collecting fridge magnets, and doing nature photography — and I finally have time to dive into longer books.</p>
                 <p>Earlier on, I explored a range of spare-time activities, including math and algorithm contests, debate tournaments, and music production.</p>
 		      </td>
@@ -832,6 +843,58 @@
       </td>
     </tr>
   </table>
+  <script>
+    (function () {
+      var nav = document.querySelector('.section-nav');
+      var links = Array.prototype.slice.call(document.querySelectorAll('.section-nav a'));
+      var sections = links.map(function (link) {
+        return document.querySelector(link.getAttribute('href'));
+      }).filter(Boolean);
+      if (!nav || !sections.length) return;
+
+      function setActive(id) {
+        links.forEach(function (link) {
+          var active = link.getAttribute('href') === '#' + id;
+          link.classList.toggle('active', active);
+          if (active) {
+            link.setAttribute('aria-current', 'location');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+      }
+
+      function updateActive() {
+        var trigger = nav.offsetHeight + 28;
+        var current = null;
+
+        sections.forEach(function (section) {
+          if (section.getBoundingClientRect().top <= trigger) {
+            current = section;
+          }
+        });
+
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+          current = sections[sections.length - 1];
+        }
+
+        setActive(current ? current.id : '');
+      }
+
+      var ticking = false;
+      window.addEventListener('scroll', function () {
+        if (ticking) return;
+        ticking = true;
+        window.requestAnimationFrame(function () {
+          updateActive();
+          ticking = false;
+        });
+      }, { passive: true });
+
+      window.addEventListener('resize', updateActive);
+      updateActive();
+    })();
+  </script>
   <script>
     (function () {
       var trigger = document.getElementById('bio-trigger');

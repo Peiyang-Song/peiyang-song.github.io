@@ -74,6 +74,10 @@ a:hover {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body,
 td,
 th,
@@ -128,6 +132,77 @@ name {
 
 span.highlight {
   background-color: #ffffd0;
+}
+
+/* Sticky section navigation */
+.section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.section-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.8rem;
+  max-width: 1050px;
+  min-height: 48px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.section-nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.section-nav a {
+  position: relative;
+  flex: 0 0 auto;
+  padding: 14px 0 12px;
+  color: #4b5563;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.section-nav a::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  left: 0;
+  height: 2px;
+  background: #1772d0;
+  transform: scaleX(0);
+  transition: transform 0.2s ease;
+}
+
+.section-nav a:hover,
+.section-nav a:focus,
+.section-nav a.active {
+  color: #1772d0;
+}
+
+.section-nav a.active::after {
+  transform: scaleX(1);
+}
+
+.section-nav a:focus-visible {
+  outline: 2px solid #1772d0;
+  outline-offset: 4px;
+}
+
+heading[id] {
+  scroll-margin-top: 72px;
 }
 
 /* Inline bio (toggle below contact links) */
@@ -189,7 +264,30 @@ button.linklike:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .section-nav a::after {
+    transition: none;
+  }
+
   .bio-inline-panel {
     transition: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .section-nav-inner {
+    justify-content: flex-start;
+    gap: 1.35rem;
+    min-height: 44px;
+    padding: 0 16px;
+  }
+
+  .section-nav a {
+    padding-top: 13px;
+    padding-bottom: 11px;
+    font-size: 14px;
   }
 }
