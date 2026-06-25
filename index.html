@@ -22,17 +22,24 @@
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
   <link rel="manifest" href="images/site.webmanifest">
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css?v=20260624-nav">
 </head>
 
 <body>
   <nav class="section-nav" aria-label="Page sections">
     <div class="section-nav-inner">
+      <a href="#news">News</a>
+      <span class="section-nav-dot" aria-hidden="true">&middot;</span>
       <a href="#research">Research</a>
+      <span class="section-nav-dot" aria-hidden="true">&middot;</span>
       <a href="#media">Media</a>
+      <span class="section-nav-dot" aria-hidden="true">&middot;</span>
       <a href="#awards">Awards</a>
+      <span class="section-nav-dot" aria-hidden="true">&middot;</span>
       <a href="#teaching">Teaching</a>
-      <a href="#service">Service</a>
+      <span class="section-nav-dot" aria-hidden="true">&middot;</span>
+      <a href="#service">Services</a>
+      <span class="section-nav-dot" aria-hidden="true">&middot;</span>
       <a href="#misc">Misc</a>
     </div>
   </nav>
@@ -79,7 +86,7 @@
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td style="padding:20px;width:100%;vertical-align:middle">
-              <heading>Recent News</heading>
+              <heading id="news">Recent News</heading>
               <p><b>[Jun 2026]</b>  Graduated from Caltech with a B.S. in Computer Science and a minor in Robotics. Excited for the next chapter!<br>
                  <b>[May 2026]</b>  We released our paper <a href="https://arxiv.org/abs/2605.17829">Interactive Evaluation Requires a Design Science</a> with an accompanying <a href="https://github.com/keyangds/interactive_evaluation">Github repo</a>.<br>
                  <b>[May 2026]</b>  Honored to receive the <strong>Outstanding Reviewer Award</strong> from EACL 2026!<br>
@@ -866,7 +873,7 @@
 
       function updateActive() {
         var trigger = nav.offsetHeight + 28;
-        var current = null;
+        var current = sections[0];
 
         sections.forEach(function (section) {
           if (section.getBoundingClientRect().top <= trigger) {
@@ -878,7 +885,7 @@
           current = sections[sections.length - 1];
         }
 
-        setActive(current ? current.id : '');
+        setActive(current.id);
       }
 
       var ticking = false;
