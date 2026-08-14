@@ -125,6 +125,80 @@
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+		  <tr onmouseout="p3_stop()" onmouseover="p3_start()" id="p3">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='p3_image'>
+                  <img src='images/p3-1.png' width="150">
+                </div>
+                <img src='images/p3-2.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function p3_start() {
+                  document.getElementById('p3_image').style.opacity = "1";
+                }
+                function p3_stop() {
+                  document.getElementById('p3_image').style.opacity = "0";
+                }
+                p3_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://arxiv.org/abs/2608.09277">
+                <papertitle>P³: Joint Program-and-Proof Planning for Verified Code Generation</papertitle>
+              </a>
+              <br />
+              <a target="_blank" href="https://lizn-zn.github.io/">Zenan Li</a>*, <a target="_blank" href="https://ziranyang0.github.io/">Ziran Yang</a>*, <strong>Peiyang Song</strong>, <a target="_blank" href="https://www.zhaoyu-li.com/">Zhaoyu Li</a>, and <a target="_blank" href="https://yangky11.github.io/">Kaiyu Yang</a> (* Equal Contribution)
+              <br />
+              <em>Preprint</em>, 2026
+              <br />
+              <a target="_blank" href="https://arxiv.org/abs/2608.09277">arXiv</a>
+              <p></p>
+              <p>
+                Verified code generation asks an LLM to produce both an executable program and a machine-checkable proof, but the common program-then-proof pipeline can lock in proof-hostile structure and trigger brittle repair loops. P³ instead derives a shared program-and-proof plan from the specification, then elaborates the implementation and proof scaffold under that plan so consistency is designed in rather than recovered afterward. Across Verina, AlgoVeri, and our repository-derived Lean4Commit0 benchmark, it improves solve rates while reducing API cost and wall-clock time.
+              </p>
+            </td>
+          </tr>
+
+		  <tr onmouseout="vero_stop()" onmouseover="vero_start()" id="vero">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='vero_image'>
+                  <img src='images/vero-1.png' width="150">
+                </div>
+                <img src='images/vero-2.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function vero_start() {
+                  document.getElementById('vero_image').style.opacity = "1";
+                }
+                function vero_stop() {
+                  document.getElementById('vero_image').style.opacity = "0";
+                }
+                vero_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://arxiv.org/abs/2608.13522">
+                <papertitle>Vero: Can AI Agents Build Formally Verified Software Repositories?</papertitle>
+              </a>
+              <br />
+              <a target="_blank" href="https://zhe.sh/">Zhe Ye</a>*, <a target="_blank" href="https://htlou.github.io/">Hantao Lou</a>*, <a target="_blank" href="https://etha-sun.github.io/">Yuechun Sun</a>*, <strong>Peiyang Song</strong>, <a target="_blank" href="https://zhengxuyan.github.io/">Zhengxu Yan</a>, <a target="_blank" href="https://www.linkedin.com/in/timothe-kasriel-913058215">Timothe Kasriel</a>, <a target="_blank" href="https://www.linkedin.com/in/sophie-zhang-34698427a">Qingyang Zhang</a>, <a target="_blank" href="https://yangky11.github.io/">Kaiyu Yang</a>, <a target="_blank" href="https://soonhokong.github.io/">Soonho Kong</a>, <a target="_blank" href="https://jxhe.info/">Jingxuan He</a>, and <a target="_blank" href="https://dawnsong.io/">Dawn Song</a> (* Equal Contribution)
+              <br />
+              <em>Preprint</em>, 2026
+              <br />
+              <a target="_blank" href="https://arxiv.org/abs/2608.13522">arXiv</a>
+              /
+              <a target="_blank" href="https://vero.verina.io/">project</a>
+              /
+              <a target="_blank" href="https://github.com/sunblaze-ucb/vero">code</a>
+              <p></p>
+              <p>
+                Existing verified-code benchmarks focus on individual functions or proof-only settings with a fixed implementation, leaving open whether agents can make coherent code-and-proof choices across real multi-module repositories. Vero is the first repository-level benchmark for joint implementation and proof synthesis in Lean 4, with 43 instances, 743 APIs, and 2,705 specifications curated from real-world software, plus an audit route for surfacing latent specification and reference errors. Frontier agents fully solve only 27 of 43 instances, showing that repository-scale verified software synthesis remains far from solved.
+              </p>
+            </td>
+          </tr>
+
 		  <tr onmouseout="interactive_stop()" onmouseover="interactive_start()" id="interactive">
             <td style="padding:5px;width:17%;vertical-align:middle">
               <div class="one">
