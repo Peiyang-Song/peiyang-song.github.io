@@ -169,7 +169,7 @@
               <a target="_blank" href="https://huggingface.co/datasets/FormalCert-AI/DynaCertBench">dataset</a>
               <p></p>
               <p>
-                Lyapunov functions and barrier certificates give formal guarantees of stability and safety, but existing verification pipelines often rely on relaxations, are conservative, or scale poorly with dimension and nonlinearity, while standard benchmarks remain dominated by low-dimensional polynomial systems. We introduce DynaCertBench, a benchmark of 105 instances spanning stability, region-of-attraction, forward-invariance, and safety tasks, together with LLM2Cert, an LLM-driven framework that synthesizes candidate certificates and routes each proof obligation to an SMT solver or a Lean proof-repair agent. LLM2Cert verifies 81 of 105 instances (77.1%), a 17.1-point improvement over one-shot proposal, and verifies 22 certificates that an SMT-only pipeline leaves unresolved.
+                Lyapunov functions and barrier certificates formally guarantee that dynamical systems are stable and safe, but solver-based pipelines scale poorly beyond low-dimensional polynomial systems. LLM2Cert has LLMs synthesize candidate certificates and routes each proof obligation to an SMT solver or a Lean proof-repair agent, verifying 77.1% of our new 105-instance DynaCertBench, a 17.1-point gain over one-shot proposal.
               </p>
             </td>
           </tr>
@@ -208,7 +208,7 @@
               <a target="_blank" href="https://github.com/BakeLab/Epi-results">results</a>
               <p></p>
               <p>
-                Long-horizon research outgrows a single model session: an agent must carry forward running experiments and the reasons behind earlier decisions, while learning from what has and has not worked. Épi sustains such investigations by combining persistent research history, hierarchical memory, branching, and independent review, with a fixed verifier evaluating experiment outputs. It has produced 120 record-setting results across 20 problem families and a computer-assisted proof of a case of Tuza's conjecture, while its lightweight coding configuration, Épi-turbo, outperforms Codex on FrontierOR at 64% of the model cost.
+                Long-horizon research outgrows any single model session. Épi is an autonomous research agent that persists across sessions through research history, hierarchical memory, branching, and independent review. It has set 120 records across 20 problem families and given a computer-assisted proof of a case of Tuza's conjecture, while its coding variant, Épi-turbo, beats Codex on FrontierOR at 64% of the model cost.
               </p>
             </td>
           </tr>
@@ -243,7 +243,7 @@
               <a target="_blank" href="https://arxiv.org/abs/2608.09277">arXiv</a>
               <p></p>
               <p>
-                Verified code generation asks an LLM to produce both an executable program and a machine-checkable proof, but the common program-then-proof pipeline can lock in proof-hostile structure and trigger brittle repair loops. P³ instead derives a shared program-and-proof plan from the specification, then elaborates the implementation and proof scaffold under that plan so consistency is designed in rather than recovered afterward. Across Verina, AlgoVeri, and our repository-derived Lean4Commit0 benchmark, it improves solve rates while reducing API cost and wall-clock time.
+                Verified code generation asks LLMs for both a program and a machine-checkable proof, yet the standard program-then-proof pipeline often yields code that is hard to verify. Inspired by Dijkstra, P³ plans the program and its proof jointly from the specification. On Verina, AlgoVeri, and our new repository-derived Lean4Commit0 benchmark, it achieves the highest solve rate in every setting while cutting API cost by up to 40%.
               </p>
             </td>
           </tr>
@@ -282,7 +282,7 @@
               <a target="_blank" href="https://github.com/sunblaze-ucb/vero">code</a>
               <p></p>
               <p>
-                Existing verified-code benchmarks focus on individual functions or proof-only settings with a fixed implementation, leaving open whether agents can make coherent code-and-proof choices across real multi-module repositories. Vero is the first repository-level benchmark for joint implementation and proof synthesis in Lean 4, with 43 instances, 743 APIs, and 2,705 specifications curated from real-world software, plus an audit route for surfacing latent specification and reference errors. Frontier agents fully solve only 27 of 43 instances, showing that repository-scale verified software synthesis remains far from solved.
+                Can AI agents build software that is provably correct, not just plausibly so? Vero is the first benchmark for joint implementation and proof synthesis at the repository level, with 43 multi-module Lean 4 repositories drawn from real-world software, from cryptographic protocols to distributed systems. Even the strongest frontier agent fully solves only 27 of them.
               </p>
             </td>
           </tr>
@@ -325,7 +325,7 @@
               <a target="_blank" href="data/psychometric_poster.pdf">poster</a>
               <p></p>
               <p>
-                Anticipating LLM behavioral tendencies from low-cost psychometric probes is critical for safe deployment, but only if self-reports reliably predict behavior. We compare broad Big 5 traits with the Theory of Planned Behavior, which targets intentions toward specific behaviors and better predicts when self-reports translate into action.
+                Psychometric probes can anticipate LLM behavior only if self-reports actually predict it. Across 11 frontier LLMs and four behavioral tasks, we find that this coherence exists but is selective: within a conversation, the Theory of Planned Behavior reaches human-level coherence where Big 5 traits fall short, and persona prompting makes self-reports consistent without bringing behavior into line.
               </p>
             </td>
           </tr>
@@ -362,7 +362,7 @@
               <a target="_blank" href="https://github.com/keyangds/interactive_evaluation">code</a>
               <p></p>
               <p>
-                AI evaluation is increasingly moving beyond static responses toward systems that act through tools, environments, users, and other agents. But the field risks adding interaction faster than it develops the scientific foundations for evaluating interaction. We argue that interactive evaluation needs a design science, not just more agent benchmarks. We define interactive evaluation, propose a 2-axis taxonomy, and outline principles for designing evaluations that are interpretable, comparable, and scientifically useful.
+                LLMs increasingly act over time through tools, environments, users, and other agents, yet evaluation still inherits assumptions from single-response benchmarks. We argue that interactive evaluation needs a design science, not just more agent benchmarks: we define it, propose a two-axis taxonomy, and derive design principles and reporting standards for evaluating interaction trajectories.
               </p>
             </td>
           </tr>
@@ -399,7 +399,7 @@
               <a target="_blank" href="https://collinskatie.github.io/hai_formalization.github.io/">project</a>
               <p></p>
               <p>
-                We conduct a mixed-methods analysis into the initial impact of AI on people's formalization workflows: what people claim they want, what they see as the barriers to those visions, and how they actually use and adapt AI in practice.
+                AI promises to transform how mathematicians formalize proofs, but how do people actually use it? Through a survey and a controlled user study, we find that people want AI assistance that preserves their control over proof discovery, and that participants formalize more accurately with AI than without, flexibly combining multiple tools despite their limitations.
               </p>
             </td>
           </tr>
@@ -434,7 +434,7 @@
               <a target="_blank" href="https://arxiv.org/abs/2602.07276">arXiv</a>
               <p></p>
               <p>
-                Steer2Adapt adapts LLMs by composing reusable steering vectors instead of learning new task-specific directions from scratch. With only a handful of examples, it dynamically discovers combinations of semantic basis vectors for reasoning and safety tasks, yielding data-efficient, stable, and transparent inference-time adaptation.
+                Most activation steering methods rely on a single static direction per task, which breaks down when a task needs multiple coordinated capabilities. Steer2Adapt instead composes reusable steering vectors from a low-dimensional semantic subspace, adapting to new tasks from only a handful of examples and improving performance by 8.2% on average across 9 reasoning and safety tasks.
               </p>
             </td>
           </tr>
@@ -477,7 +477,7 @@
 			  <a target="_blank" href="https://www.youtube.com/watch?v=Nc8ynHrQwrQ">talk</a>
               <p></p>
               <p>
-                We present the first comprehensive survey dedicated to reasoning failures in LLMs. By unifying fragmented research efforts, our survey provides a structured perspective on systemic weaknesses in LLM reasoning, offering valuable insights and guiding future research towards building stronger, more reliable, and robust reasoning capabilities.
+                LLMs reason impressively, yet still fail in surprisingly simple scenarios. We present the first comprehensive survey of LLM reasoning failures, organizing them by reasoning type (embodied vs. non-embodied) and failure type (fundamental, application-specific, robustness), and analyzing the root causes and mitigations of each to guide more robust reasoning.
               </p>
             </td>
           </tr>
@@ -522,7 +522,7 @@
               <a target="_blank" href="https://wap.mittrchina.com/news/detail/15459">media</a>
               <p></p>
               <p>
-                LLMs say they have personalities, but they don't act like it. Alignment today shapes language, not behavior. This linguistic-behavioral dissociation cautions against equating coherent self-reports with cognitive depth. 
+                LLMs say they have personalities, but they don't act like it. Alignment stabilizes self-reported traits in human-like ways, yet these traits fail to predict behavior, and persona injection shifts self-reports with little effect on actions. Alignment today shapes language, not behavior, cautioning against equating coherent self-reports with cognitive depth.
               </p>
             </td>
           </tr>
@@ -575,7 +575,7 @@
               <a target="_blank" href="https://www.marktechpost.com/2024/07/30/lean-copilot-an-ai-tool-that-allows-large-language-models-llms-to-be-used-in-lean-for-proof-automation/">media</a>
               <p></p>
               <p>
-                We introduce Lean Copilot, a framework for running neural network inference directly in Lean. It enables various LLM-based proof automation tools that integrate seamlessly into the workflow of Lean users, including tools for suggesting proof steps (tactics), selecting premises, and searching for complete proofs using LLMs.
+                We bring LLMs into Lean as copilots for human mathematicians. Lean Copilot runs LLM inference natively in Lean, powering tools that suggest proof steps, select premises, and search for complete proofs within users' workflows. On Mathematics in Lean, it automates 74.2% of proof steps, 85% more than Lean's rule-based automation (aesop).
               </p>
             </td>
           </tr>
@@ -610,7 +610,7 @@
               <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/11082679">proceeding</a>
               <p></p>
               <p>
-                What operations can you perform efficiently when you use the “time of arrival” of a signal's edge to represent a number? We present negative-logarithmic delay space arithmetic as a completely new approach to temporal coding. Under this approach, general purpose arithmetic is transformed to a “soft” version of the standard temporal operations in such a way that preserves all of the algebraic identities.
+                What can you compute efficiently when a number is encoded as the arrival time of a signal edge? We introduce negative-logarithmic delay space arithmetic, a new approach to temporal computing that turns general-purpose arithmetic into “soft” versions of standard temporal operations while preserving all of their algebraic identities.
               </p>
             </td>
           </tr>
@@ -655,7 +655,7 @@
 			  <a target="_blank" href="https://www.marktechpost.com/2024/10/11/leanagent-the-first-life-long-learning-agent-for-formal-theorem-proving-in-lean-proving-162-theorems-previously-unproved-by-humans-across-23-diverse-lean-mathematics-repositories/">media</a>
               <p></p>
               <p>
-                LeanAgent continuously learns and improves on ever-expanding mathematical knowledge without forgetting what it learned before. It has a curriculum learning strategy that optimizes the learning trajectory in terms of mathematical difficulty, a dynamic database for efficient management of evolving mathematical knowledge, and progressive training to balance stability and plasticity.
+                Mathematicians work across ever-evolving domains, while existing provers are trained on static datasets. LeanAgent learns continuously from expanding mathematical knowledge without forgetting, via curriculum learning, a dynamic knowledge database, and progressive training. It proved 155 theorems across 23 Lean repositories that previously lacked formal proofs, many in advanced mathematics.
               </p>
             </td>
           </tr>
@@ -692,7 +692,7 @@
 			  <a target="_blank" href="https://leandojo.org/leanprogress.html">project</a>
               <p></p>
               <p>
-                LLMs struggling with long proofs? We present LeanProgress, which uses a novel critic model where “distance” to the goal state acts as a key signal for step prediction, boosting performance on neural theorem proving in Lean. Our method achieves 75.1% prediction accuracy, with a 3.8% gain in proof search with step prediction.
+                LLM provers struggle with long proofs, partly because they have no sense of how close a proof is to completion. LeanProgress predicts the number of remaining proof steps with 75.8% accuracy and uses this signal to guide best-first search, improving the 41.4% ReProver baseline on Mathlib4 by 3.8%, with the largest gains on longer proofs.
               </p>
             </td>
           </tr>
@@ -731,7 +731,7 @@
 			  <a target="_blank" href="https://www.marktechpost.com/2025/12/24/this-ai-paper-from-stanford-and-harvard-explains-why-most-agentic-ai-systems-feel-impressive-in-demos-and-then-completely-fall-apart-in-real-use/">media</a>
               <p></p>
               <p>
-                Cutting-edge agentic AI systems are built on foundation models that can be adapted to plan, reason, and interact with external tools to perform increasingly complex and specialized tasks. As these systems grow in capability and scope, adaptation becomes a central mechanism for improving performance, reliability, and generalization. In this paper, we unify the rapidly expanding research landscape into a systematic framework that spans both agent adaptations and tool adaptations.
+                As agents move beyond prompting, adaptation through post-training, memory, and skills has become central to their performance and reliability, yet research remains fragmented. We unify the field in a four-paradigm framework spanning agent adaptation (from tool-execution or agent-output signals) and tool adaptation (agent-agnostic or agent-supervised), and chart open problems ahead.
               </p>
             </td>
           </tr>
@@ -766,7 +766,7 @@
               <a target="_blank" href="https://arxiv.org/abs/2512.24063">arXiv</a>
               <p></p>
               <p>
-                LLMs show sharply different generalization behaviors: supervised fine-tuning often narrows capability, while reinforcement-learning tuning tends to preserve it. We introduce a benchmark that decomposes reasoning into atomic skills such as calculation, fact retrieval, simulation, enumeration, and diagnosis, enabling fine-grained analysis beyond coarse accuracy metrics.
+                Why does supervised fine-tuning often narrow LLM capabilities while reinforcement learning tends to preserve them? We introduce a benchmark that decomposes reasoning into atomic skills such as calculation, fact retrieval, and simulation, and trace them through post-training: RL-tuned models keep stable skill profiles, while SFT models drift sharply and overfit to surface patterns.
               </p>
             </td>
           </tr>
@@ -807,7 +807,7 @@
               <a target="_blank" href="data/a_not_b_poster.pdf">poster</a>
               <p></p>
               <p>
-                Motivated by the crucial cognitive phenomenon of A-not-B errors, we present the first systematic evaluation on the surprisingly vulnerable inhibitory control abilities of LLMs. We reveal that this weakness undermines LLMs' trustworthy reasoning capabilities across diverse domains, and introduce various mitigations.
+                Infants make A-not-B errors: they repeat a previously rewarded action even after conditions visibly change. In the first systematic evaluation of this inhibitory control in LLMs, models that excel with in-context learning lose up to 83.3% accuracy when the context changes trivially. Better pretraining mitigates these errors, but self-explanation fails to remove them.
               </p>
             </td>
           </tr>
@@ -848,7 +848,7 @@
 			  <a target="_blank" href="https://kenantang.github.io/cjk-idioms-gpt/">demo</a>
               <p></p>
               <p>
-                To compile a dictionary of East Asian idiom translations demands much time and creativity even for expert translators. To alleviate such burden, we automate high-quality data generation with GPT-4, and discover Pareto-optimal prompting strategies on both faithfulness and creativity, outperforming existing translation engines and human baseline.
+                East Asian idioms pack rich cultural context into a few characters, and compiling their translations demands much time and creativity even from experts. Using GPT-4, we identify Pareto-optimal prompting strategies for faithfulness and creativity that outperform Google and DeepL, producing far more high-quality translations per idiom than human translators at low cost.
               </p>
             </td>
           </tr>
@@ -931,7 +931,9 @@
               /
               <a target="_blank" href="https://www.marktechpost.com/2023/07/01/can-llms-generate-mathematical-proofs-that-can-be-rigorously-checked-meet-leandojo-an-open-source-ai-playground-with-toolkits-benchmarks-and-models-for-large-language-models-to-prove-formal-theore/">media</a>
               <p></p>
-              <p>Can LLMs generate mathematical proofs that can be rigorously checked? We release LeanDojo: an open-source playground consisting of toolkits, benchmarks, and models for LLMs to prove formal theorems in the Lean proof assistant.</p>
+              <p>
+                Can LLMs generate mathematical proofs that can be rigorously checked? LeanDojo removes the barriers of private code, data, and heavy compute with an open-source Lean playground of toolkits, data, models, and a 98,734-theorem benchmark. Its retrieval-augmented prover, ReProver, trains in one GPU-week and outperforms GPT-4, with no proprietary data.
+              </p>
             </td>
           </tr>
         </tbody></table>
