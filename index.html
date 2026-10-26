@@ -97,11 +97,11 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading id="news">Recent News</heading>
               <p>
+                <b>[Oct 2026]</b>  Released <a target="_blank" href="https://arxiv.org/abs/2610.30524">LLM2Cert</a>, which synthesizes Lyapunov and barrier certificates with LLMs and verifies them with SMT/Lean, together with the <a target="_blank" href="https://huggingface.co/datasets/FormalCert-AI/DynaCertBench">DynaCertBench</a> benchmark.<br>
                 <b>[Oct 2026]</b>  Released <a target="_blank" href="https://arxiv.org/abs/2610.24944">Épi</a>, a persistent, self-improving agent for autonomous research in math and beyond.<br>
                 <b>[Sep 2026]</b>  Excited to share that <a target="_blank" href="https://arxiv.org/abs/2608.09277">P³</a>, <a target="_blank" href="https://arxiv.org/abs/2608.13522">Vero</a>, and <a target="_blank" href="https://arxiv.org/abs/2606.12730">Rethinking Psychometric Evaluation of LLMs</a> have all been accepted to <b>NeurIPS 2026</b>!<br>
                 <b>[Sep 2026]</b>  Gave a guest lecture for <a target="_blank" href="https://jinming.tech/learn-ml-by-building/">CS 4824 / ECE 4424: Machine Learning</a> at Virginia Tech on Sep 14 (<a target="_blank" href="data/Formal Reasoning in AI.pdf">slides</a>).<br>
                 <b>[Aug 2026]</b>  Released our new study on <a target="_blank" href="https://arxiv.org/abs/2606.04273">Human Agency in Initial Human-AI Proof Formalization Workflows</a> (<a target="_blank" href="https://x.com/katie_m_collins/status/2088003945150972093">thread</a>).<br>
-                <b>[Aug 2026]</b>  Gave an invited talk at Shanghai AI Lab on <a target="_blank" href="data/XINGHE Talk Peiyang Song.pdf">From Reasoning Failures to Reliable Intelligence</a>.<br>
             </td>
           </tr>
         </tbody></table>
@@ -115,7 +115,7 @@
 				      I study <strong>machine reasoning</strong>, in both <i>formal</i> and <i>informal</i> worlds: how AI systems can derive conclusions, act on them, evolve as tasks drift, and remain reliable when settings become complex.
 				    </p>
 		        <p>
-				      <strong>(1) Formal reasoning.</strong> In mathematics, verifiability gives us a rare foundation for building dependable reasoning systems. I develop models and infrastructure <a href="#leandojo">[LeanDojo]</a> <a href="#leancopilot">[Lean Copilot]</a> that form a bidirectional loop between formal environments and ML systems, enabling efficient human-AI collaboration in theorem proving <a href="#leanuser">[Human-AI Formalization]</a>. Building on this loop, I move beyond static models toward adaptive agents that evolve with growing libraries <a href="#leanagent">[LeanAgent]</a> and expanding contexts <a href="#leanprogress">[LeanProgress]</a>, and further toward persistent agents that refine their methods across long-horizon, verifier-checked research <a href="#epi">[Épi]</a>. I also extend this line of work from mathematics to other formalizable domains, such as verified code generation <a href="#p3">[P³]</a> <a href="#vero">[Vero]</a>.
+				      <strong>(1) Formal reasoning.</strong> In mathematics, verifiability gives us a rare foundation for building dependable reasoning systems. I develop models and infrastructure <a href="#leandojo">[LeanDojo]</a> <a href="#leancopilot">[Lean Copilot]</a> that form a bidirectional loop between formal environments and ML systems, enabling efficient human-AI collaboration in theorem proving <a href="#leanuser">[Human-AI Formalization]</a>. Building on this loop, I move beyond static models toward adaptive agents that evolve with growing libraries <a href="#leanagent">[LeanAgent]</a> and expanding contexts <a href="#leanprogress">[LeanProgress]</a>, and further toward persistent agents that refine their methods across long-horizon, verifier-checked research <a href="#epi">[Épi]</a>. I also extend this line of work from mathematics to other formalizable domains, such as verified code generation <a href="#p3">[P³]</a> <a href="#vero">[Vero]</a> and certificate synthesis for dynamical systems <a href="#llm2cert">[LLM2Cert]</a>.
 				    </p>
 		        <p>
 				      <strong>(2) Informal reasoning.</strong> In open-ended natural-language settings, I continue to study how agents adapt <a href="#adaptation">[Adaptation]</a> <a href="#s2a">[Steer2Adapt]</a> and generalize <a href="#generalization">[Generalization]</a> <a href="#idiom">[Idiom]</a>. These goals, however, become inherently harder to pursue in the absence of symbolic verifiers or reliable reward signals. To fundamentally alleviate this challenge, one way forward is to develop meaningful agent-centered evaluations that elicit and capture rich behavioral signals across diverse real-world scenarios <a href="#interactive">[Interactive Evaluation]</a> <a href="#personality">[Personality Illusion]</a> <a href="#psychometric">[Psychometrics]</a>. Then at runtime, the complementary challenge is to equip reasoning systems to identify, mitigate, and resist failures as they inevitably arise <a href="#llmrf">[Reasoning Failures]</a> <a href="#a_not_b">[A-Not-B]</a>.
@@ -132,6 +132,47 @@
 		</table>
 
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+		  <tr onmouseout="llm2cert_stop()" onmouseover="llm2cert_start()" id="llm2cert">
+            <td style="padding:5px;width:17%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='llm2cert_image'>
+                  <img src='images/llm2cert-1.png' width="150">
+                </div>
+                <img src='images/llm2cert-2.png' width="150">
+              </div>
+              <script type="text/javascript">
+                function llm2cert_start() {
+                  document.getElementById('llm2cert_image').style.opacity = "1";
+                }
+                function llm2cert_stop() {
+                  document.getElementById('llm2cert_image').style.opacity = "0";
+                }
+                llm2cert_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:83%;vertical-align:middle">
+              <a target="_blank" href="https://arxiv.org/abs/2610.30524">
+                <papertitle>LLM2Cert: LLM Synthesis of Certificates with SMT/Lean Verification</papertitle>
+              </a>
+              <br />
+              <a target="_blank" href="https://github.com/Zhipeng0727">Zhipeng Cao</a>*, <strong>Peiyang Song</strong>*, <a target="_blank" href="https://www.vertovec.info/">Nikolaus Vertovec</a>, <a target="_blank" href="https://github.com/weiru-cui">Weiru Cui</a>, <a target="_blank" href="https://zhihaoyang30.github.io/">Zhihao Yang</a>, <a target="_blank" href="https://orcid.org/0009-0009-4901-5661">Mingkang Liu</a>, <a target="_blank" href="https://orcid.org/0009-0004-4998-0844">Luxia Lin</a>, <a target="_blank" href="https://lcs.ios.ac.cn/~xuebai/">Bai Xue</a>†, and <a target="_blank" href="https://www.cs.ox.ac.uk/people/alessandro.abate/home.html">Alessandro Abate</a>† (* <strong>Equal Contribution</strong>, † Equal Advising)
+              <br />
+              <em>Preprint</em>, 2026
+              <br />
+              <a target="_blank" href="https://arxiv.org/abs/2610.30524">arXiv</a>
+              /
+              <a target="_blank" href="https://formalcert-ai.github.io/llm2cert/">project</a>
+              /
+              <a target="_blank" href="https://github.com/FormalCert-AI/llm2cert/">code</a>
+              /
+              <a target="_blank" href="https://huggingface.co/datasets/FormalCert-AI/DynaCertBench">dataset</a>
+              <p></p>
+              <p>
+                Lyapunov functions and barrier certificates give formal guarantees of stability and safety, but existing verification pipelines often rely on relaxations, are conservative, or scale poorly with dimension and nonlinearity, while standard benchmarks remain dominated by low-dimensional polynomial systems. We introduce DynaCertBench, a benchmark of 105 instances spanning stability, region-of-attraction, forward-invariance, and safety tasks, together with LLM2Cert, an LLM-driven framework that synthesizes candidate certificates and routes each proof obligation to an SMT solver or a Lean proof-repair agent. LLM2Cert verifies 81 of 105 instances (77.1%), a 17.1-point improvement over one-shot proposal, and verifies 22 certificates that an SMT-only pipeline leaves unresolved.
+              </p>
+            </td>
+          </tr>
 
 		  <tr onmouseout="epi_stop()" onmouseover="epi_start()" id="epi">
             <td style="padding:5px;width:17%;vertical-align:middle">
